@@ -4,12 +4,25 @@
     <title>Project1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav> 
+      <%= link_to 'Home', root_path %>
+      ||
+      <% if @current_user.present? %>
+        <%= link_to "Admin", users_path if @current_user.admin? %>
+        <%= link_to "Profile", user_path(@current_user) %>
+        <%= link_to "Make Riddle", new_riddle_path %>
+        <%= link_to "Logout #{ @current_user.email }", login_path, :method => "delete" %>
+      <% else %>
+      <%= link_to 'Sign Up', new_user_path %>
+      <%= link_to 'Log in', login_path %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

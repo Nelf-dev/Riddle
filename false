@@ -1,0 +1,3 @@
+      invoke  active_record
+      create    db/migrate/20220723075751_create_users.rb
+      create    app/models/user.rb

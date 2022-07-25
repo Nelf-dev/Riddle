@@ -1,0 +1,9 @@
+<%= form_for @riddle do |f| %>
+    <%= f.label :question %>
+    <%= f.text_field :question %>
+
+    <%= f.label :answer %>
+    <%= f.text_field :answer %>
+
+    <%= f.submit "Make new Riddle" %>
+<% end %>
