@@ -1,5 +1,7 @@
 <h1>All Riddles</h1>
 
 <% @riddles.each do |riddle| %>
-    <li><%= link_to riddle.question, riddle %> made by <%= link_to riddle.user.email , riddle.user %> </li>
+    <li>
+    <%= link_to riddle.name, riddle %> <br> Author: <%= link_to riddle.user.email, riddle.user %> 
+    </li>
 <% end %>

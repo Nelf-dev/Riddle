@@ -1,4 +1,6 @@
 class RiddlesController < ApplicationController
+  before_action :check_for_login
+
   def index
     @riddles = Riddle.all
   end
@@ -8,12 +10,8 @@ class RiddlesController < ApplicationController
   end
 
   def create
-    @riddle = Riddle.new riddle_params
-    Riddle.create riddle_params
-    user = Riddle.find(last)
-    user.user_id = @current_user
-    user.save
-    # How to set user_id default as @user.id
+    riddle = Riddle.create riddle_params
+    @current_user.riddles << riddle #associates the riddle into the current_user
     redirect_to riddles_path
   end
 
@@ -21,10 +19,11 @@ class RiddlesController < ApplicationController
   end
 
   def show
+    @riddle = Riddle.find params[:id]
   end
 
   private
   def riddle_params
-    params.require(:riddle).permit(:question, :answer, :user_id)
+    params.require(:riddle).permit(:name, :question, :answer, :user_id)
   end
 end

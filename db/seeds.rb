@@ -15,9 +15,9 @@ puts "#{ Score.count } scores"
 
 Riddle.destroy_all
 
-r1 = Riddle.create :question => "what is 1+1?", :answer => "2"
-r2 = Riddle.create :question => "What is yellow and black and makes honey?", :answer => "Bee"
-r3 = Riddle.create :question => "what smells?", :answer => "you"
+r1 = Riddle.create :name => 'maths 1', :question => "what is 1+1?", :answer => "2"
+r2 = Riddle.create :name => 'animals 1', :question => "What is yellow and black and makes honey?", :answer => "Bee"
+r3 = Riddle.create :name => '???', :question => "what smells?", :answer => "you"
 
 puts "#{ Riddle.count } riddles"
 
