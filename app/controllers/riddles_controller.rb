@@ -11,7 +11,7 @@ class RiddlesController < ApplicationController
 
   def create
     riddle = Riddle.create riddle_params
-    @current_user.riddles << riddle #associates the riddle into the current_user
+    @current_user.riddles << riddle
     redirect_to riddles_path
   end
 
