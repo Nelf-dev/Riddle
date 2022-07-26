@@ -1,3 +1,7 @@
 a {
     padding-right: 1em;
 }
+
+.pfp {
+    max-width: 200px;
+}

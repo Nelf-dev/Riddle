@@ -1,18 +1,23 @@
-<h1>Profile</h1>
+<div class="user_body"></div>
+    <div class="profile">
+        <h1>Profile</h1>
 
-<h2><%= @user.email%></h2>
+        <h2><%= @user.email%></h2>
 
 
-<%= image_tag @user.image if @user.image.present? %>
+        <%= image_tag @user.image, :class => 'pfp' if @user.image.present? %>
 
-<h3>Info</h3>
-<p><%= @user.info %>.</p>
+        <h3>Info</h3>
+        <p><%= @user.info %>.</p>
 
-<%= link_to 'Edit Profile', edit_user_path %>
-
-<h3>Riddles</h3>
-<% @user.riddles.each do |riddle| %>
-    <li>
-        <%= link_to riddle.name, riddle %>
-    </li>
-<% end %>
+        <%= link_to 'Edit Profile', edit_user_path %>
+    </div>
+    <div class="riddles">
+        <h3>Riddles</h3>
+        <% @user.riddles.each do |riddle| %>
+            <li>
+                <%= link_to riddle.name, riddle %>
+            </li>
+        <% end %>
+    </div>
+</div>

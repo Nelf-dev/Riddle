@@ -1,7 +1,18 @@
 <h1> <%= @riddle.name %> - Highscores </h1>
 
+<table>
+    <tr>
+        <th>Seconds</th>
+        <th>User</th>
+    </tr>
+
     <% @scores.each do |score| %>
         <% if score.riddle_id == @riddle.id  %>
-            <li><%= score.point %> Seconds by <strong><%= (@user.find (score.user_id)).email %></strong></li>
+            <tr>
+                <td> <%= score.point %> </td>
+                <td> <%= (@user.find (score.user_id)).email%> </td>
+            </tr>
         <% end %>
     <% end %>
+
+</table>
