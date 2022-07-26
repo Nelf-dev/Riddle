@@ -1,2 +1,7 @@
-<h1>Scores#show</h1>
-<p>Find me in app/views/scores/show.html.erb</p>
+<h1> <%= @riddle.name %> - Highscores </h1>
+
+    <% @scores.each do |score| %>
+        <% if score.riddle_id == @riddle.id  %>
+            <li><%= score.point %> Seconds by <strong><%= (@user.find (score.user_id)).email %></strong></li>
+        <% end %>
+    <% end %>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :riddles
   resources :scores
 
+  post "/riddles/:id" => 'riddles#answer'
   get "/login" => "session#new"
   post "/login" => "session#create"
   delete "/login" => "session#destroy"

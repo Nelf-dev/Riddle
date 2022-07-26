@@ -9,5 +9,8 @@ class ScoresController < ApplicationController
   end
 
   def show
+    @riddle = Riddle.find params[:id] #associated RIDDLES INFO
+    @user = User.all #make it so that only users who played show up on scores
+    @scores = Score.all.order("point")
   end
 end

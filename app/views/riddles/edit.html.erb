@@ -1,2 +1,5 @@
-<h1>Riddle#edit</h1>
-<p>Find me in app/views/riddle/edit.html.erb</p>
+<h1>Edit Riddle</h1>
+
+<%= render :partial => 'form' %>
+
+<%= link_to "Delete Riddle", @riddle, :method => 'delete', :data => {:confirm => 'Please confirm.'} %>

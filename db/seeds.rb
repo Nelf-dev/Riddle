@@ -35,6 +35,8 @@ u2.riddles << r3
 puts "User and Scores"
 
 u1.scores << s1
+u1.scores << s2
+u1.scores << s3
 
 puts "Riddle and Scores"
 
