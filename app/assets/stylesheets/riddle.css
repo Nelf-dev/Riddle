@@ -1,7 +1,91 @@
-a {
-    padding-right: 1em;
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #393E46;
+    margin: auto 0;
+}
+
+h1, h2, h3 {
+    color: #D65A31;
+}
+
+p, table, label, li {
+    color: #EEEEEE;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    max-width: 960px;
+    padding: 1em;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #D65A31;
+}
+nav a{ 
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #393E46;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav a:hover{ 
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #D4E2D4;
+}
+
 
 .pfp {
     max-width: 200px;
 }
+
+.logout {
+    color: #d7d94c;
+}
+
+.profile {
+    display: inline-block;
+    position: relative;
+    padding-left: 5em;
+    padding-top: 1.5em;
+    vertical-align: top;
+    background-color: #222831;
+
+}
+
+.userbody {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #222831;
+    height: 100vh;
+}
+
+#pinfo {
+    width: 500px;
+}
+
+#priddle {
+    width: 300px;
+    position: relative;
+}
+
+#borderriddle {
+    position: absolute;
+    border-left: 1px solid #DF7861;
+    left: 2em;
+    top: 25px;
+    bottom: 25px;
+}
+

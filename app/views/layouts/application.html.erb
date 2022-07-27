@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Ridlr</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
     <nav> 
       <%= link_to 'Home', root_path %>
-      ||
       <% if @current_user.present? %>
         <%= link_to "Admin", users_path if @current_user.admin? %>
         <%= link_to "Profile", user_path(@current_user) %>
         <%= link_to "Make Riddle", new_riddle_path %>
         <%= link_to "All Riddles", riddles_path %>
-        <%= link_to "Logout #{ @current_user.email }", login_path, :method => "delete" %>
+        <%= link_to "Logout #{ @current_user.email }", login_path, :method => "delete", :class => 'logout' %>
       <% else %>
       <%= link_to 'Sign Up', new_user_path %>
       <%= link_to 'Log in', login_path %>
       <% end %>
     </nav>
+    <div class="userbody">
     <%= yield %>
+    </div>
   </body>
 </html>
