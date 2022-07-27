@@ -1,5 +1,6 @@
-<h1>Edit Riddle</h1>
+
+<h1 class="bouncingheadings">Edit Riddle</h1>
 
 <%= render :partial => 'form' %>
 
-<%= link_to "Delete Riddle", @riddle, :method => 'delete', :data => {:confirm => 'Please confirm.'} %>
+<%= button_to "Delete Riddle", @riddle, :class => "delete", :method => 'delete', :data => {:confirm => 'Please confirm.'} %>

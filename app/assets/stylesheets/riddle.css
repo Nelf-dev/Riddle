@@ -166,7 +166,7 @@ input:hover {
     animation: bounce 5s infinite;
 }
 
-#new_user, #new_riddle{
+#new_user, #new_riddle, .edit_riddle{
     text-align: center;
     padding: 0;
     max-width: 500px;
@@ -231,4 +231,20 @@ input:hover {
 
 #answer {
     margin-left: 100px;
+}
+
+/* edit riddle page */
+
+.edit_riddle {
+    display: block;
+}
+
+.button_to {
+    text-align: center;
+    padding: 0;
+}
+
+.delete {
+    border-color: red;
+    color: red;
 }
