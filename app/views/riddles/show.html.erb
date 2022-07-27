@@ -1,15 +1,17 @@
-<h1><%= @riddle.name %></h1>
+<div class="riddleshow">
+    <h1 class="bouncingheadings"><%= @riddle.name %></h1>
 
-<h2> <%= @riddle.question %> </h2>
+    <h2> <%= @riddle.question %> </h2>
 
-<%= form_with do |f| %>
-    <%= f.label :answer %>
-    <%= f.text_field :answer %>
-    <%= f.submit %>
-<% end %>
+    <%= form_with do |f| %>
+        <%= f.label :please_answer_below %>
+        <%= f.text_field :answer %>
+        <%= f.submit :class => "answerbutton" %>
+    <% end %>
 
-<% if @current_user.id == @riddle.user_id %>
-    <%= link_to 'Edit Riddle', edit_riddle_path %>
-<% end %>
+    <% if @current_user.id == @riddle.user_id %>
+        <%= link_to 'Edit Riddle', edit_riddle_path %>
+    <% end %>
+</div>
 
 

@@ -7,12 +7,13 @@ html {
 }
 
 body {
-    background-color: #393E46;
+    background-color: #222831;
     margin: auto 0;
 }
 
 h1, h2, h3 {
     color: #D65A31;
+    margin: 0;
 }
 
 p, table, label, li {
@@ -25,10 +26,10 @@ a {
 }
 
 nav {
-    max-width: 960px;
+    width: 100%;
     padding: 1em;
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+    margin: 0;
     background-color: #D65A31;
 }
 nav a{ 
@@ -36,6 +37,8 @@ nav a{
     padding-right: 1em;
     color: #393E46;
     text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
     transition: 0.5s;
 }
 
@@ -44,13 +47,59 @@ nav a:hover{
     border-bottom: 2px solid #D4E2D4;
 }
 
+form {
+    display: block;
+    padding-left: 4em;
+    padding-top: 1em;
+}
 
-.pfp {
-    max-width: 200px;
+label {
+    display: block;
+    padding-top: 1em;
+}
+
+input, textarea {
+    background: transparent;
+    width: 470px;
+    height: 50px;
+    margin-top: 1em;
+    padding: 0px 15px 0px 15px;
+    color: #D65A31;
+    border: solid 1px #D65A31;
+    transition: all 0.5s ease-in-out;
+}
+
+input:hover {
+    background-color: #393E46;
 }
 
 .logout {
-    color: #d7d94c;
+    color: #cacac1;
+}
+
+.allpages {
+    display: block;
+    width: 100%;
+    margin: auto;
+    background-color: #222831;
+    height: 100vh;
+}
+
+.allpages a{
+    color: #D65A31;
+}
+
+.postbutton {
+    color: rgb(85, 167, 85);
+    border-color: rgb(85, 167, 85);
+}
+
+
+
+/* Profile Page */
+
+.pfp {
+    max-width: 200px;
 }
 
 .profile {
@@ -89,3 +138,97 @@ nav a:hover{
     bottom: 25px;
 }
 
+/* Home Page */
+
+.welcome {
+    padding-top: 1em;
+    padding-left: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: example 3s linear;
+}
+
+@keyframes example {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Sign Up + Log in */
+
+.bouncingheadings {
+    text-align: center;
+    padding-top: 1em;
+    animation: bounce 5s infinite;
+}
+
+#new_user, #new_riddle{
+    text-align: center;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    }
+
+@keyframes bounce {
+    0% {
+    transform: translate(0, 0px);
+    }
+    50% {
+    transform: translate(0, 8px);
+    }
+} 
+
+#user_password_confirmation {
+    margin-bottom: 2em;
+    margin: auto;
+}
+
+/* New riddle form */
+
+.questionbox {
+    height: 100px;
+}
+
+/* Riddles index */
+
+.listings {
+    margin-left: 4em;
+    margin-top: 1em;
+}
+
+.rollinglist {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: example 3s linear;
+}
+
+/* riddle question */
+
+.riddleshow {
+    position: relative;
+    text-align: center;
+    top: 20%;
+}
+
+.riddleshow h2 {
+    padding-top: 2em;
+}
+
+.riddleshow form{
+    padding-left: 0;
+    padding-bottom: 1em;
+}
+
+.answerbutton {
+    color: rgb(85, 167, 85);
+    border-color: rgb(85, 167, 85);
+    width: 100px;
+}
+
+#answer {
+    margin-left: 100px;
+}

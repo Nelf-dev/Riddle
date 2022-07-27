@@ -1,7 +1,10 @@
-<h1>All Riddles</h1>
+<h1 class="welcome">All Riddles</h1>
 
+<div class="listings">
 <% @riddles.each do |riddle| %>
-    <li>
+    <li class="rollinglist">
     <%= link_to riddle.name, riddle %> <br> Author: <%= link_to riddle.user.email, riddle.user %> 
     </li>
 <% end %>
+
+</div>

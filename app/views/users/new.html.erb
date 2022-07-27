@@ -1,4 +1,5 @@
-<h1>Sign Up!</h1>
+
+<h1 class="bouncingheadings">Sign Up!</h1>
 
 <% if @user.errors.any? %>
     <ol>
@@ -8,6 +9,7 @@
     </ol>
 <% end %>
 
+
 <%= form_for @user do |f| %>
     <%= f.label :email %>
     <%= f.email_field :email %>
@@ -15,9 +17,10 @@
     <%= f.label :password %>
     <%= f.password_field :password %>
 
-    <%= f.label :password_confirmation %>
+    <%= f.label :confirm_password %>
+    <br>
     <%= f.password_field :password_confirmation %>
 
-    <%= f.submit %>
+    <%= f.submit "Sign Up" , :class => "postbutton" %>
 
 <% end %>
