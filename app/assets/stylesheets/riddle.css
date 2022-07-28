@@ -89,6 +89,10 @@ input:hover {
     color: #D65A31;
 }
 
+.allpages li{
+    padding-bottom: 2em;
+}
+
 .postbutton {
     color: rgb(85, 167, 85);
     border-color: rgb(85, 167, 85);
@@ -247,4 +251,74 @@ input:hover {
 .delete {
     border-color: red;
     color: red;
+}
+
+/* coverup for highscore */
+
+.coverup {
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 150vh;
+}
+
+.congratulations {
+    position:relative;
+    text-align: center; 
+    top: 25%
+}
+
+.congratulations h1,h2 {
+    padding-bottom: 1em;
+}
+
+.congratulations button {
+    border: solid 1px rgb(102, 157, 102);
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    transition: 1s;
+}
+
+.congratulations button:hover {
+    background: rgb(51, 75, 51);
+}
+
+
+/* Table for highscores */
+
+.heading_score {
+    text-align: center;
+    padding: 2em;
+}
+
+table {
+    width:70%;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+.table_header {
+    background-color: #d65a3167;
+    border: 1px solid rgba(255,255,255,0.1);
+    
+}
+
+.table_content {
+    height: 400px;
+    overflow-x: auto;
+    margin-top: 0px;
+}
+
+th{
+    padding: 15px 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: center;
+    border: solid 1px rgba(255,255,255,0.1);
 }

@@ -31,15 +31,16 @@ class RiddlesController < ApplicationController
   end
 
   def answer
-    riddle_answer = Riddle.find(params[:id]).answer
-    riddle_id = Riddle.find(params[:id])
+    @riddle = Riddle.find params[:id]
+    riddle_answer = @riddle.answer
     if riddle_answer.downcase == params[:answer].downcase #if win
       score = Time.new - session[:start_time].to_datetime # when answered correctly it subtracts the time now from when they started.
-      new_score = Score.new(:point => score.round(3), :user_id => @current_user.id, :riddle_id => riddle_id.id)
+      new_score = Score.new(:point => score.round(3), :user_id => @current_user.id, :riddle_id => @riddle.id)
       new_score.save
       redirect_to score_path #goes into scores#show for the particular riddle
     else #if loss
-      flash_alert = "Wrong! Guess again" #this does not work TODO
+      @flash_alert = "Wrong! Guess again" #this does not work TODO
+      render :show
     end
   end
 

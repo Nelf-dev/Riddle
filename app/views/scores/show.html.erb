@@ -1,9 +1,21 @@
-<h1> <%= @riddle.name %> - Highscores </h1>
 
+<div class="coverup">
+    <div class="congratulations">
+        <h1>Thanks for playing</h1>
+        <h2> <%= @riddle.name %> </h2>
+        <button class="view_score postbutton" >View Score</button>
+    </div>
+</div>
+
+<div class="heading_score">
+    <h1> <%= @riddle.name %> - Highscores </h1>
+</div>
+
+<div class="table_content">
 <table>
     <tr>
-        <th>Seconds</th>
-        <th>User</th>
+        <th class="table_header" >Seconds</th>
+        <th class="table_header" >User</th>
     </tr>
 
     <% @scores.each do |score| %>
@@ -14,5 +26,5 @@
             </tr>
         <% end %>
     <% end %>
-
 </table>
+</div>

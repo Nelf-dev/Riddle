@@ -1,21 +1,21 @@
 <div class="userbody">
     <div class="profile" id="pinfo">
-        <h1>Profile</h1>
+        <h1 class="welcome">Profile</h1>
 
-        <h2><%= @user.email%></h2>
+        <h2 class="welcome"><%= @user.email%></h2>
 
         <%= image_tag @user.image, :class => 'pfp' if @user.image.present? %>
 
-        <h3>Info</h3>
+        <h3 class="welcome">Info</h3>
         <p><%= @user.info %>.</p>
 
         <%= link_to 'Edit Profile', edit_user_path %>
     </div>
     <div class="profile" id="priddle">
         <div id="borderriddle"></div>
-        <h1>Riddles</h1>
+        <h1 class="welcome">Riddles</h1>
         <% @user.riddles.each do |riddle| %>
-            <li>
+            <li class="welcome">
                 <%= link_to riddle.name, riddle %>
             </li>
         <% end %>

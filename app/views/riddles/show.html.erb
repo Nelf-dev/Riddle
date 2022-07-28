@@ -1,12 +1,16 @@
 <div class="riddleshow">
     <h1 class="bouncingheadings"><%= @riddle.name %></h1>
 
+    <% if @flash_alert.present? %>
+        <h1><%= @flash_alert %></h1>
+    <% end %>
+
     <h2> <%= @riddle.question %> </h2>
 
-    <%= form_with do |f| %>
-        <%= f.label :please_answer_below %>
-        <%= f.text_field :answer %>
-        <%= f.submit :class => "answerbutton" %>
+    <%= form_tag riddle_path(@riddle) do %>
+        <%= label_tag :please_answer_below %>
+        <%= text_field_tag :answer %>
+        <%= submit_tag "Answer", :class => "answerbutton" %>
     <% end %>
 
     <% if @current_user.id == @riddle.user_id %>

@@ -11,5 +11,17 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+//= require jquery3
 //= require_tree .
+
+
+
+$( document ).ready(function(){
+    hideDiv();
+});
+
+const hideDiv = function() {
+    $('.view_score').click(function(){
+        $(".coverup").fadeOut(1000);
+    });
+};
