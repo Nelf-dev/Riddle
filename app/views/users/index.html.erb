@@ -1,8 +1,14 @@
-<h1 class="welcome" >All Users</h1>
+<div>
+    <div class="riddleindex">
+        <h1 class="welcome" >All Users</h1>
 
-<h2 class="welcome"><%= @users.count %> registered users</h2>
-<ul>
-    <% @users.each do |user| %>
-    <li class="welcome"><%= user.email %></li>
-    <% end %>
-</ul>
+        <h2 class="welcome"><%= @users.count %> registered users</h2>
+        <div class="adminlinks">
+            <ul class="unordered">
+                <% @users.each do |user| %>
+                <p id="individual_link"><%= link_to user.email, user %></p>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>

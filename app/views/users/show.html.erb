@@ -1,24 +1,26 @@
 <div class="userbody">
     <div class="profile" id="pinfo">
-        <h1 class="welcome">Profile</h1>
-
-        <h2 class="welcome"><%= @user.email%></h2>
-
-        <%= image_tag @user.image, :class => 'pfp' if @user.image.present? %>
-
-        <h3 class="welcome">Info</h3>
-        <p><%= @user.info %>.</p>
+            <h1 class="welcome" id="pheading">Profile</h1>
+            <h2 class="welcome" id="pheading"><%= @user.email.capitalize()%></h2>
+            <%= image_tag @user.image, :class => 'pfp' if @user.image.present? %>
+        <h3 class="info">Info</h3>
+        <p class="blurb"><%= @user.info %>.</p>
 
 
         <%= link_to 'Edit Profile', edit_user_path if @current_user.id == @user.id%>
+        <% if @current_user.admin? %>
+        <%= button_to "Delete Profile", @user, :class => "delete", :method => 'delete', :data => {:confirm => 'Please confirm.'} %>
+        <% end %>
     </div>
     <div class="profile" id="priddle">
         <div id="borderriddle"></div>
-        <h1 class="welcome">Riddles</h1>
-        <% @user.riddles.each do |riddle| %>
-            <li class="welcome">
-                <%= link_to riddle.name, riddle %>
-            </li>
-        <% end %>
+        <h1 class="welcome" id="pheading">Riddles</h1>
+        <div class="riddlelinks">
+            <% @user.riddles.each do |riddle| %>
+                <p id="individual_link">
+                    <%= link_to riddle.name, riddle %>
+                </p>
+            <% end %>
+        </div>
     </div>
 </div>

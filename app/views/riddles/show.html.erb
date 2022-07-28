@@ -1,11 +1,11 @@
 <div class="riddleshow">
     <h1 class="bouncingheadings"><%= @riddle.name %></h1>
 
-    <% if @flash_alert.present? %>
-        <h1><%= @flash_alert %></h1>
-    <% end %>
-
     <h2> <%= @riddle.question %> </h2>
+
+    <% if @flash_alert.present? %>
+        <h1 class="flash"><%= @flash_alert %></h1>
+    <% end %>
 
     <%= form_tag riddle_path(@riddle) do %>
         <%= label_tag :please_answer_below %>

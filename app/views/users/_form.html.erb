@@ -1,9 +1,9 @@
 <%= form_for @user do |f| %>
     <%= f.label :info %>
-    <%= f.text_field :info %>
+    <%= f.text_area :info, :class => "questionbox" %>
 
     <%= f.label :image %>
     <%= f.text_field :image %>
 
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", :class => "postbutton" %>
 <% end %>

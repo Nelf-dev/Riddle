@@ -69,7 +69,7 @@ input, textarea {
     transition: all 0.5s ease-in-out;
 }
 
-input:hover {
+input:hover, textarea:hover {
     background-color: #393E46;
 }
 
@@ -103,7 +103,10 @@ input:hover {
 /* Profile Page */
 
 .pfp {
-    max-width: 200px;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 .profile {
@@ -126,7 +129,7 @@ input:hover {
 }
 
 #pinfo {
-    width: 500px;
+    width: 700px;
 }
 
 #priddle {
@@ -142,6 +145,33 @@ input:hover {
     bottom: 25px;
 }
 
+#pheading {
+    margin-left: -2em;
+}
+
+.riddlelinks {
+    padding-top: 1em;
+}
+
+#individual_link { /****************************************/
+    padding: 0.5em;
+    background: linear-gradient(to left, #222831 50%, #b7573785 49%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#individual_link:hover {
+    background-position: left;
+}
+
+.info {
+    padding-top: 1em;
+}
+
+.blurb {
+    letter-spacing: 1px;
+    line-height: 30px;
+}
 /* Home Page */
 
 .welcome {
@@ -197,17 +227,20 @@ input:hover {
     height: 100px;
 }
 
-/* Riddles index */
+/* Riddles + Admin index */
 
 .listings {
     margin-left: 4em;
     margin-top: 1em;
 }
 
-.rollinglist {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: example 3s linear;
+.riddleindex {
+    width: 960px;
+    margin-left: 10em;
+}
+
+.riddleindex h1{
+    padding-left: 1.5em;
 }
 
 /* riddle question */
@@ -232,6 +265,22 @@ input:hover {
     border-color: rgb(85, 167, 85);
     width: 100px;
 }
+
+.flash {
+    font-size: 18pt;
+    color: rgb(215, 62, 62);
+    animation: horizontal-shaking 2s infinite;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+
 
 #answer {
     margin-left: 100px;
@@ -284,6 +333,16 @@ input:hover {
     background: rgb(51, 75, 51);
 }
 
+/* User Forms */
+
+.edit_user {
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 1.5em;
+    width: 500px;
+}
+
 
 /* Table for highscores */
 
@@ -321,4 +380,15 @@ td {
     text-align: center;
     vertical-align: center;
     border: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* Admin page */
+
+.unordered {
+    width: 300px;
+}
+
+.adminlinks a{
+    color: rgb(254, 198, 170);
 }
