@@ -1,5 +1,35 @@
 <% if @current_user.present?%>
-    <h1 class="welcome">Welcome back <%= @current_user.email %></h1>
+    <h1 class="welcome">Hi there <%= @current_user.email %></h1>
+    
+    <div class="instructions">
+    <h2>Welcome to the Ridlr</h2>
+    <p>This is a collaborative platform for users to connect and share riddles!</p>
+
+    <h2> How to Play</h2>
+    <p>Head over to the make Riddles tab</p>
+    <p>Fill out the form to make your very first riddle!</p>
+    <p>Once you are finished you can head over to our all riddles section.</p>
+    <p>You will be able to play other riddlers games!</p>
+    <p>If you like the riddle, you can navigate to their profile and see what other riddles they have made!</p>
+    <br>
+    <p>Enjoy and have fun!</p>
+    </div>
 <% else %>
     <h1 class="welcome">Welcome! Please sign up!</h1>
+
+    <div class="instructions">
+    <h3>Welcome to the Ridlr</h3>
+    <p>This is a collaborative platform for users to connect and share riddles!</p>
+
+    <h3> How to Play</h3>
+
+    <p>Make sure you have created and signed into your account.</p>
+    <p>Head over to the make Riddles tab</p>
+    <p>Fill out the form to make your very first riddle!</p>
+    <p>Once you are finished you can head over to our all riddles section.</p>
+    <p>You will be able to play other riddlers games!</p>
+    <p>If you like the riddle, you can navigate to their profile and see what other riddles they have made!</p>
+    <br>
+    <p>Enjoy and have fun!</p>
+    </div>
 <% end %>

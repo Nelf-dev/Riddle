@@ -411,4 +411,11 @@ td {
 }
 
 
+/* Home */
 
+.instructions {
+    margin-top: 2em;
+    margin-left: 5em;
+    letter-spacing: 1px;
+    line-height: 30px;
+}

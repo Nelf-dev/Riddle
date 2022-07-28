@@ -7,17 +7,17 @@ puts "#{ User.count } users"
 
 Score.destroy_all
 
-s1 = Score.create :point => 23
-s2 = Score.create :point => 24
-s3 = Score.create :point => 26
+s1 = Score.create :point => 4.576
+s2 = Score.create :point => 3.789
+s3 = Score.create :point => 7.564
 
 puts "#{ Score.count } scores"
 
 Riddle.destroy_all
 
-r1 = Riddle.create :name => 'maths 1', :question => "what is 1+1?", :answer => "2"
-r2 = Riddle.create :name => 'animals 1', :question => "What is yellow and black and makes honey?", :answer => "Bee"
-r3 = Riddle.create :name => '???', :question => "what smells?", :answer => "you"
+r1 = Riddle.create :name => 'Race Positions', :question => "You are in a race and you pass the person in second place. What place are you in now?", :answer => "second"
+r2 = Riddle.create :name => 'Rainbows', :question => "What is at the end of the rainbow?", :answer => "W"
+r3 = Riddle.create :name => 'What is wrong?', :question => "What word is always spelled wrong?", :answer => "wrong"
 
 puts "#{ Riddle.count } riddles"
 
