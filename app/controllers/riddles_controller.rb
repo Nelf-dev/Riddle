@@ -17,6 +17,9 @@ class RiddlesController < ApplicationController
 
   def edit
     @riddle = Riddle.find params[:id]
+    if @riddle.user_id != @current_user.id
+      redirect_to riddles_path
+    end
   end
 
   def update

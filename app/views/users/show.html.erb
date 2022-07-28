@@ -9,7 +9,8 @@
         <h3 class="welcome">Info</h3>
         <p><%= @user.info %>.</p>
 
-        <%= link_to 'Edit Profile', edit_user_path %>
+
+        <%= link_to 'Edit Profile', edit_user_path if @current_user.id == @user.id%>
     </div>
     <div class="profile" id="priddle">
         <div id="borderriddle"></div>
