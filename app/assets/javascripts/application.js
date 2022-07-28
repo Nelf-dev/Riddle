@@ -17,6 +17,7 @@
 
 
 $( document ).ready(function(){
+    // setInterval(timer,1000); // I would like to add timer, however unable to due to Riddles controller rendering the page everytime anincorect guess is made will reset the timer. TODO
     hideDiv();
 });
 
@@ -25,3 +26,9 @@ const hideDiv = function() {
         $(".coverup").fadeOut(1000);
     });
 };
+
+// let sec = 0;
+// const timer = function(){
+//     sec += 1;
+//     $(".timer").text(sec); 
+// };

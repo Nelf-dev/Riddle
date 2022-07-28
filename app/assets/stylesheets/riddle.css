@@ -151,17 +151,7 @@ input:hover, textarea:hover {
 
 .riddlelinks {
     padding-top: 1em;
-}
-
-#individual_link { /****************************************/
-    padding: 0.5em;
-    background: linear-gradient(to left, #222831 50%, #b7573785 49%) right;
-    background-size: 200%;
-    transition: .5s ease-out;
-}
-
-#individual_link:hover {
-    background-position: left;
+    width: 170px;
 }
 
 .info {
@@ -232,6 +222,7 @@ input:hover, textarea:hover {
 .listings {
     margin-left: 4em;
     margin-top: 1em;
+    width: 300px;
 }
 
 .riddleindex {
@@ -306,7 +297,7 @@ input:hover, textarea:hover {
 
 .coverup {
     position: absolute;
-    background-color: black;
+    background-color: #222831;
     width: 100vw;
     height: 150vh;
 }
@@ -343,6 +334,23 @@ input:hover, textarea:hover {
     width: 500px;
 }
 
+/* All listing links */
+
+#individual_link {
+    background: linear-gradient(0deg, #d65a3167, #d65a3167) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+#individual_link:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+#individual_link {
+    padding-bottom: 2px;
+    --bg-h: 2px;
+}
+
 
 /* Table for highscores */
 
@@ -352,7 +360,7 @@ input:hover, textarea:hover {
 }
 
 table {
-    width:70%;
+    width:35%;
     table-layout: fixed;
     margin: 0 auto;
 }
@@ -369,6 +377,14 @@ table {
     margin-top: 0px;
 }
 
+.table_row {
+    transition: 0.5s;
+}
+
+.table_row:hover {
+    background-color: #2f3339af;
+}
+
 th{
     padding: 15px 10px;
     text-align: left;
@@ -383,12 +399,16 @@ td {
 }
 
 
+
 /* Admin page */
 
 .unordered {
-    width: 300px;
+    width: 200px;
 }
 
 .adminlinks a{
     color: rgb(254, 198, 170);
 }
+
+
+

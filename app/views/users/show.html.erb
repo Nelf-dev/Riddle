@@ -1,10 +1,10 @@
 <div class="userbody">
     <div class="profile" id="pinfo">
             <h1 class="welcome" id="pheading">Profile</h1>
-            <h2 class="welcome" id="pheading"><%= @user.email.capitalize()%></h2>
+            <h2 class="welcome" id="pheading"><%= @user.email%></h2>
             <%= image_tag @user.image, :class => 'pfp' if @user.image.present? %>
         <h3 class="info">Info</h3>
-        <p class="blurb"><%= @user.info %>.</p>
+        <p class="blurb"><%= @user.info %></p>
 
 
         <%= link_to 'Edit Profile', edit_user_path if @current_user.id == @user.id%>
