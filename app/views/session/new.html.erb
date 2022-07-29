@@ -1,8 +1,10 @@
 <h1 class="bouncingheadings">Log in</h1>
 
+<div class="error">
 <% if flash[:error].present? %> 
     <h2><%= flash[:error] %></h2>
 <% end %>
+</div>
 
 <%= form_tag login_path, :id => 'new_user' do %>
     <%= label_tag :email %>

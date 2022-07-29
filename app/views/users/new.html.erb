@@ -1,13 +1,15 @@
 
 <h1 class="bouncingheadings">Sign Up!</h1>
 
-<% if @user.errors.any? %>
-    <ol>
-        <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ol>
-<% end %>
+<div class="error">
+    <% if @user.errors.any? %>
+        <ol>
+            <% @user.errors.full_messages.each do |msg| %>
+                <h2><%= msg %></h2>
+            <% end %>
+        </ol>
+    <% end %>
+</div>
 
 
 <%= form_for @user do |f| %>

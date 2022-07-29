@@ -211,6 +211,15 @@ input:hover, textarea:hover {
     margin: auto;
 }
 
+.error {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.error h2{
+    color:rgb(215, 62, 62)
+}
+
 /* New riddle form */
 
 .questionbox {
