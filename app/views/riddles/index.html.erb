@@ -5,7 +5,7 @@
         <div class="listings">
             <% @riddles.each do |riddle| %>
                 <p id="individual_link">
-                <%= link_to riddle.name, riddle %> <br> Author: <%= link_to riddle.user.email, riddle.user %> 
+                <%= link_to riddle.name, riddle %> <br> Author: <%= link_to riddle.user.email, riddle.user if riddle.user.present?  %> 
                 </p>
             <% end %>
         </div>
