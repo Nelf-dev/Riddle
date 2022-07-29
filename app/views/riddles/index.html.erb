@@ -3,10 +3,12 @@
             <h1 class="welcome">All Riddles</h1>
 
         <div class="listings">
-            <% @riddles.each do |riddle| %>
-                <p id="individual_link">
-                <%= link_to riddle.name, riddle %> <br> Author: <%= link_to riddle.user.email, riddle.user if riddle.user.present?  %> 
-                </p>
+            <% @riddles.each do |riddle|%>
+                <% if riddle.user.present? %>
+                    <p id="individual_link">
+                    <%= link_to riddle.name, riddle %> <br> Author: <%= link_to riddle.user.email, riddle.user %> 
+                    </p>
+                <% end %>
             <% end %>
         </div>
     </div>
