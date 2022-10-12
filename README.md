@@ -2,6 +2,11 @@
 
 [Click Here](https://riddlingriddler.herokuapp.com/) to access the application.
 
+Please use the following credentials for easy access.
+
+Email: thetesterterry@gmail.com
+Password: testing
+
 **Info**
 
 A project using CRUD systems inspired by scrabble and wordle. 

@@ -7,12 +7,12 @@ html {
 }
 
 body {
-    background-color: #222831;
+    background-color: #1C3879;
     margin: auto 0;
 }
 
 h1, h2, h3 {
-    color: #D65A31;
+    color: #F9F5EB;
     margin: 0;
 }
 
@@ -30,7 +30,7 @@ nav {
     padding: 1em;
     text-align: left;
     margin: 0;
-    background-color: #D65A31;
+    background-color: #607EAA;
 }
 nav a{ 
     padding-left: 1em;
